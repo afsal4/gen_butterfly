@@ -1,7 +1,6 @@
 import streamlit as st 
 import torch 
 from diffusers import DDPMScheduler, UNet2DModel, DDPMPipeline
-from torchvision import transforms
 
 device = 'cuda'
 
@@ -48,7 +47,7 @@ def generate_image(model):
     st.image(res[0])
 
 def main():
-    path = ''
+    path = 'ddpm_model_and_scheduler.pth'
     st.title('Generate Butterfly images')
     generate = st.button('Generate Butterfly')
     model = load_model(path)
