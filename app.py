@@ -1,7 +1,6 @@
 import streamlit as st 
 import torch 
 from diffusers import DDPMScheduler, UNet2DModel, DDPMPipeline
-from torchvision import transforms
 
 device = 'cuda'
 
